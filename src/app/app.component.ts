@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Portfolio2';
+status: boolean=false;
+toggleclass(){
+  this.status = !this.status
+}
 }

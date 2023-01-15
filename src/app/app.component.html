@@ -1,3 +1,54 @@
-<div>
-  <p>Hello world</p>
+<div class="divcontainer">
+  <header>
+    <nav nav class="navbar navbar-default navbar-fixed-top">
+      <div class="hamburger" (click)="toggleclass()">
+        <span class="ham"></span>
+        <span class="ham"></span>
+        <span class="ham"></span>
+      </div>
+      <div class="aboutme1" [ngClass]="status === true ? 'aboutme': null ">About Me</div>
+      <div class="skills1"[ngClass]="status === true ? 'skills': null ">Skills</div>
+      <div class="projects1"[ngClass]="status === true ? 'projects': null ">Projects</div>
+      <div class="resume1"[ngClass]="status === true ? 'resume': null ">Resume</div>
+      <div class="contact1"[ngClass]="status === true ? 'contact': null ">Contact</div>
+    </nav>
+
+    <div class="about_me">
+      <p class="aboutmeText">
+        "Lifelong learner with a diverse background in education and employment in Software Engineering and Project Management. I enjoy the challenges of managing new projects and teams, integrating new ideas, and working with a team to efficiently overcome project challenges. Air Force Veteran with over 11 years of leadership experience"
+      </p>
+    </div>
+
+</header>
+<div class="myskillsDiv">
+  <div class="myskills">
+      <div>
+        <img src="../assets/skills/django.png"/>
+      </div>
+      <div>
+        <img src="../assets/skills/angular.png"/>
+      </div>
+      <div>
+        <img src="../assets/skills/css.png"/>
+      </div>
+      <div>
+        <img src="../assets/skills/matlab.png"/>
+      </div>
+      <div>
+        <img src="../assets/skills/mongodb.png"/>
+      </div>
+      <div>
+        <img src="../assets/skills/mongoose.png"/>
+      </div>
+      <div>
+        <img src="../assets/skills/react.png"/>
+      </div>
+      <div>
+        <img src="../assets/skills/sql.png"/>
+      </div>
+
+  </div>
+</div>
+
+
 </div>
