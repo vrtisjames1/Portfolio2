@@ -63,35 +63,30 @@ export class AppComponent {
 status: boolean=false;
 toggleclass(){
   this.status = !this.status;
-  this.isHamburguer = true;
 }
 
 scrollaboutme(el: HTMLElement) {
   // el.scrollIntoView({behavior: "smooth"});
   el.scrollIntoView();
   this.status = false;
-  this.isHamburguer = true;
 }
 
 scrollSkills(el: HTMLElement) {
   // el.scrollIntoView({behavior: "smooth"});
   el.scrollIntoView();
   this.status = false;
-  this.isHamburguer = true;
 }
 
 scrollProjects(el: HTMLElement) {
   // el.scrollIntoView({behavior: "smooth"});
   el.scrollIntoView();
   this.status = false;
-  this.isHamburguer = true;
 }
 
 scrollContact(el: HTMLElement) {
   // el.scrollIntoView({behavior: "smooth"});
   el.scrollIntoView();
   this.status = false;
-  this.isHamburguer = true;
 }
 // hamburger menu
 

@@ -8,11 +8,11 @@
         <div class="icon-bar" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'hide'"></div>
         <div class="icon-bar" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'bottomX'"></div>
       </div>
-      <div class="aboutme1" [ngClass]="status === true ? 'aboutme': null " (click)="scrollaboutme(point_4)">About Me</div>
-      <div class="skills1"[ngClass]="status === true ? 'skills': null " (click)="scrollSkills(point_3)">Skills</div>
-      <div class="projects1"[ngClass]="status === true ? 'projects': null " (click)="scrollProjects(point_2)">Projects</div>
-      <div class="resume1"[ngClass]="status === true ? 'resume': null "  ><a target="_blank" href="https://drive.google.com/file/d/1hvNHDxtfryfxd-T6IqgGPVznmlga_DrI/view?usp=share_link" >Resume</a></div>
-      <div class="contact1"[ngClass]="status === true ? 'contact': null " (click)="scrollContact(point_1)">Contact</div>
+      <div class="aboutme1" [ngClass]="status === true ? 'aboutme': null " (click)="scrollaboutme(point_4)" (click)="this.isHamburguer = true;">About Me</div>
+      <div class="skills1"[ngClass]="status === true ? 'skills': null " (click)="scrollSkills(point_3)" (click)="this.isHamburguer = true;">Skills</div>
+      <div class="projects1"[ngClass]="status === true ? 'projects': null " (click)="scrollProjects(point_2)" (click)="this.isHamburguer = true;">Projects</div>
+      <div class="resume1"[ngClass]="status === true ? 'resume': null "  ><a target="_blank" href="https://drive.google.com/file/d/1hvNHDxtfryfxd-T6IqgGPVznmlga_DrI/view?usp=share_link" (click)="this.isHamburguer = true;">Resume</a></div>
+      <div class="contact1"[ngClass]="status === true ? 'contact': null " (click)="scrollContact(point_1)" (click)="this.isHamburguer = true;">Contact</div>
     </nav>
 
     <div [ngClass]="status === true ? 'iconsfalse icons' : 'icons'">
