@@ -19,6 +19,7 @@ header{
     border-bottom: 1px solid black;
     border-bottom-left-radius: 5px;
     background-color: rgba(103, 128, 159, 0.8);
+    padding-bottom: 2em;
 }
 nav{
   width: 100vw;
@@ -122,6 +123,7 @@ a{
   align-items: center;
   text-align: center;
   margin: auto;
+  padding-top: 2em;
 }
 .photo{
   width: 200px;
@@ -169,37 +171,57 @@ a{
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
+
+  .skillsDiv{
+    max-width: 500px;
+    border: 5px solid grey;
+    margin-top: 15em;
+    border-radius: 5px;
+    width:98vw;
+  }
+
+  .skillsTitle{
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding-bottom: 0.6em;
+    padding-top: 1em;
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(181,181,123,0.9961050724637681) 41%);
+    text-shadow: white 2px 2px;
+    font-family: 'Unbounded', cursive;
+  }
 .myskillsDiv{
   display: flex;
-  max-width: 500px;
+  // max-width: 500px;
   overflow-x:scroll;
   background-color: rgba(169, 169, 169,0.65);
-  border: 5px solid grey;
   border-radius: 5px;
-  margin: 8em 5em 0 5em;
+  // margin: 0 5em 0 5em;
 }
  .myskills{
   display: flex;
   justify-content: space-evenly;
   gap: 1em;
-  margin: 0 3em 0 1.5em;
+  // margin: 0 3em 0 1.5em;
  }
 
 .contactmeDiv{
   margin: 0 1em 8em 1em;
-  border: 1px solid grey;
+  border: 5px solid grey;
   border-radius: 5px;
   text-align: center;
   background-color: white;
   width: 90vw;
   font-size: 1.3em;
+  max-width: 500px;
+  padding-bottom: 4em;
 }
 
 .contactmeTitle{
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid grey;
   padding-bottom: 0.6em;
   padding-top: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 4em;
   width: 100%;
   background: rgb(238,238,238);
   background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(181,181,123,0.9961050724637681) 41%);
@@ -209,12 +231,12 @@ a{
 
 // caresoul
 .caresoulDiv{
-  border: 1px solid grey;
+  border: 5px solid grey;
   max-width: 600px;
   height: auto;
   border-radius: 5px;
   object-fit:cover;
-  margin: 8em 0 8em 0;
+  margin: 15em 0 15em 0;
 }
 .projtext{
   background-color: rgba(0,0,0,0.8);
@@ -255,14 +277,14 @@ a{
 // media query
 @media only screen and (max-width: 1100px) {
   .myskillsDiv{
-    margin-right: 1.2em;
-    margin-left: 1.2em;
+    padding-right: 1.2em;
+    padding-left: 1.2em;
     width: 100%;
     overscroll-behavior: contain;
   }
 
   .aboutmeText{
-    font-size: 0.9em;
+    font-size: 1.2em;
   }
 
   nav{
@@ -299,8 +321,7 @@ a{
   }
 
   .contactmeDiv{
-    width: 98vw;
-    margin: 1em 0 3em 0;
+    width: 99vw;
   }
 
   .projectsimg{
@@ -308,6 +329,10 @@ a{
   }
 
   .projtext{
-font-size: 0.8em;
+  font-size: 0.8em;
+  }
+
+  .skillsDiv{
+    width: 98vw;
   }
 }

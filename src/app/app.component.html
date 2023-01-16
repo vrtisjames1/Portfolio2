@@ -3,11 +3,6 @@
 
   <header>
     <nav nav class="navbar navbar-default navbar-fixed-top">
-      <!-- <div class="hamburger" (click)="toggleclass()">
-        <span class="ham"></span>
-        <span class="ham"></span>
-        <span class="ham"></span>
-      </div> -->
       <div (click)="onClick()" (click)="toggleclass()" class="btnham">
         <div class="icon-bar" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'topX'"></div>
         <div class="icon-bar" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'hide'"></div>
@@ -50,6 +45,8 @@
     </div>
 </header>
 <div #point_3></div>
+<div class="skillsDiv">
+<div class="skillsTitle"><h2>My Skills</h2></div>
 <div class="myskillsDiv" >
   <div class="myskills">
       <div>
@@ -78,7 +75,7 @@
       </div>
   </div>
 </div>
-
+</div>
 
 <!-- projects -->
 <div #point_2></div>
