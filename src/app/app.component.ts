@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, VERSION, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,35 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'Portfolio2';
 status: boolean=false;
 toggleclass(){
   this.status = !this.status
 }
+
+scrollaboutme(el: HTMLElement) {
+  // el.scrollIntoView({behavior: "smooth"});
+  el.scrollIntoView();
+  this.status = false;
+}
+
+scrollSkills(el: HTMLElement) {
+  // el.scrollIntoView({behavior: "smooth"});
+  el.scrollIntoView();
+  this.status = false;
+}
+
+scrollProjects(el: HTMLElement) {
+  // el.scrollIntoView({behavior: "smooth"});
+  el.scrollIntoView();
+  this.status = false;
+}
+
+scrollContact(el: HTMLElement) {
+  // el.scrollIntoView({behavior: "smooth"});
+  el.scrollIntoView();
+  this.status = false;
+}
+
 }

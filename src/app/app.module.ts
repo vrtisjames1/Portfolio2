@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,8 +20,9 @@ import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-
+import { ViewportScroller } from "@angular/common";
+import { Router } from "@angular/router";
+import { ExtraOptions, RouterModule, Routes } from "@angular/router";
 
 @NgModule({
   declarations: [

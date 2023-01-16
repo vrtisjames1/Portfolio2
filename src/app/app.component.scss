@@ -22,8 +22,8 @@ header{
 }
 nav{
   width: 100vw;
-  font-size: 1.2em;
-  height:auto;
+  font-size: 1.75em;
+  height: auto;
   display: flex;
   justify-content: space-evenly;
   position: fixed;
@@ -107,7 +107,10 @@ a{
 // about me stuff
 .aboutmeText{
     display: flex;
-    margin: 3em 4em 2em 4em;
+    margin: 3em 4.2em 2em 4.2em;
+    font-size: 1.5em;
+    text-align:justify;
+    text-align-last:left;
 }
 
 @keyframes fadeIn {
@@ -141,13 +144,13 @@ a{
   background-color: rgba(169, 169, 169,0.65);
   border: 5px solid grey;
   border-radius: 5px;
-  margin: 5em 5em 5em 5em;
+  margin: 3em 5em 1.5em 5em;
 }
  .myskills{
   display: flex;
   justify-content: space-evenly;
   gap: 1em;
-  margin: 0 1em 0 1em;
+  margin: 0 3em 0 1.5em;
  }
 
 //  hamburger icon
@@ -166,7 +169,7 @@ a{
 }
 
 .myprojects{
-  margin: 1em;
+  margin: 1.5em 1em 1.5em 1em;
   border: 1px solid black;
   border-radius: 5px;
   text-align: center;
@@ -175,6 +178,10 @@ a{
   font-size: 1.3em;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2em;
 }
 
 .projectsTitle{
@@ -187,10 +194,17 @@ a{
   font-family: 'Black Ops One', cursive;
 }
 
+.projectsimg{
+  max-width: 400px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+}
+
 // contact me information
 
 .contactmeDiv{
-  margin: 1em;
+  margin: 1.5em 1em 1.5em 1em;
   border: 1px solid black;
   border-radius: 5px;
   text-align: center;
@@ -210,7 +224,7 @@ a{
 }
 
 // media query
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1100px) {
   .myskillsDiv{
     margin-right: 1.2em;
     margin-left: 1.2em;
@@ -223,6 +237,7 @@ a{
   }
 
   nav{
+    font-size: 1.2em;
     flex-direction: column;
     align-items: center;
     align-content: center;
@@ -237,7 +252,7 @@ a{
     padding: 10px 0 10px 0;
     width: 60%;
     border: 1px solid black;
-    background-color: rgba(235,235,235,0.7);
+    background-color: rgba(235,235,235,1);
     margin: 0.8em 0 0.8em 0;
     border-radius: 5px;
   }
@@ -248,9 +263,14 @@ a{
 
   .myprojects{
     width: 100vw;
+    margin: 0;
   }
 
   .contactmeDiv{
+    width: 100vw;
+  }
+
+  .projectsimg{
     width: 100vw;
   }
 }
