@@ -105,9 +105,22 @@ a{
 }
 
 // about me stuff
+.photodiv{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+.photo{
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-top: 3em;
+}
+
 .aboutmeText{
     display: flex;
-    margin: 3em 4.2em 2em 4.2em;
+    margin: 2em 4.2em 2em 4.2em;
     font-size: 1.5em;
     text-align:justify;
     text-align-last:left;
@@ -162,8 +175,8 @@ a{
   cursor: pointer;
 }
 .ham{
-  height: 4px;
-  width: 25px;
+  height: 6px;
+  width: 40px;
   background-color: black;
   border-radius: 5px;
 }
@@ -198,13 +211,20 @@ a{
   max-width: 400px;
   border: 1px solid black;
   border-radius: 5px;
-  display: flex;
+  filter: grayscale(60%)
+}
+
+.projectsimg:hover{
+  max-width: 400px;
+  border: 1px solid black;
+  border-radius: 5px;
+  filter: grayscale(0%)
 }
 
 // contact me information
 
 .contactmeDiv{
-  margin: 1.5em 1em 1.5em 1em;
+  margin: 1.5em 1em 1.5em 3em;
   border: 1px solid black;
   border-radius: 5px;
   text-align: center;
@@ -222,6 +242,59 @@ a{
   background: linear-gradient(0deg, rgba(160,210,235,1) 0%, rgba(255,255,255,1) 100%);
   font-family: 'Black Ops One', cursive;
 }
+
+.btn1, .btn2{
+  border: 1px solid black;
+}
+
+// projects images stuff
+/* Container needed to position the button. Adjust the width as needed */
+.projContainer {
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image responsive */
+.projContainer, .projectsimg {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.projContainer .btn1 {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn2 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.projtext{
+  color: grey;
+  width: 80%;
+  padding-bottom: 1em;
+  border-bottom: 1px solid grey;
+}
+
 
 // media query
 @media only screen and (max-width: 1100px) {
