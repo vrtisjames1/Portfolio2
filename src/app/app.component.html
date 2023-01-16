@@ -1,10 +1,17 @@
 <div class="divcontainer">
+  <div #point_4></div>
+
   <header>
     <nav nav class="navbar navbar-default navbar-fixed-top">
-      <div class="hamburger" (click)="toggleclass()">
+      <!-- <div class="hamburger" (click)="toggleclass()">
         <span class="ham"></span>
         <span class="ham"></span>
         <span class="ham"></span>
+      </div> -->
+      <div (click)="onClick()" (click)="toggleclass()" class="btnham">
+        <div class="icon-bar" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'topX'"></div>
+        <div class="icon-bar" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'hide'"></div>
+        <div class="icon-bar" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'bottomX'"></div>
       </div>
       <div class="aboutme1" [ngClass]="status === true ? 'aboutme': null " (click)="scrollaboutme(point_4)">About Me</div>
       <div class="skills1"[ngClass]="status === true ? 'skills': null " (click)="scrollSkills(point_3)">Skills</div>
@@ -32,14 +39,11 @@
             </div>
         </a>
           </div>
-
-
-     
-        <div #point_4></div>
     <div class="about_me" >
       <div class="photodiv">
         <img class="photo" src="../assets/images/photo.jpg"/>
       </div>
+      <div class="imgline"></div>
       <p class="aboutmeText">
         "Lifelong learner with a diverse background in education and employment in Software Engineering and Project Management. I enjoy the challenges of managing new projects and teams, integrating new ideas, and working with a team to efficiently overcome project challenges. Air Force Veteran with over 11 years of leadership experience"
       </p>
@@ -74,38 +78,62 @@
       </div>
   </div>
 </div>
+
+
+<!-- projects -->
 <div #point_2></div>
-<div class="myprojects">
-  <div class="projectsTitle"><h2>Projects</h2></div>
-  <h2>Battleships</h2>
-  <div class="projContainer">
-    <img class="projectsimg" src="../assets/projects/battleships.jpg"/>
-    <button type="button" class="btn btn1 btn-success" ><a href="https://github.com/vrtisjames1/battleship" target="_blank">Github</a></button>
-    <button type="button" class="btn btn2 btn-success" ><a href="https://battleships123.netlify.app/" target="_blank">Live</a></button>
-  </div>
-  <p class="projtext">Front-end angular and back-end django application where two people can create a profile and play a classic game of "Battleships"</p>
-  <h2>Connect4</h2>
-  <div class="projContainer">
-    <img class="projectsimg" src="../assets/projects/connect4.jpg"/>
-    <button type="button" class="btn btn1 btn-success" ><a href="https://github.com/vrtisjames1/connect4_frontend" target="_blank">Github</a></button>
-    <button type="button" class="btn btn2 btn-success" ><a href="https://connect4unit4.herokuapp.com/" target="_blank">Live</a></button>
-  </div>
-  <p class="projtext"> Front-end react and back-end django application where two people can create a profile and play a classic game of "Connect4" through websockets</p>
-  <h2>Secret Santa</h2>
-  <div class="projContainer">
-    <img class="projectsimg" src="../assets/projects/secretsanta.jpg"/>
-    <button type="button" class="btn btn1 btn-success" ><a href="https://github.com/vrtisjames1/Proj3_App" target="_blank">Github</a></button>
-    <button type="button" class="btn btn2 btn-success" ><a href="https://ancient-bastion-28884.herokuapp.com/" target="_blank">Live</a></button>
-  </div>
-  <p class="projtext">A server side multi-page application to play a game of "Secret Santa". Groups input their names, wishlist, and partner restrictions (such as a spouse), and then names are drawn at random and emailed in secret to each person</p>
-  <h2>Student Updates</h2>
-  <div class="projContainer last">
-    <img class="projectsimg" src="../assets/projects/teacher.jpg"/>
-    <button type="button" class="btn btn1 btn-success" ><a href="https://github.com/vrtisjames1/app" target="_blank">Github</a></button>
-    <button type="button" class="btn btn2 btn-success" ><a href="https://studentupdate.netlify.app/" target="_blank">Live</a></button>
-  </div>
-  <p class="projtext">Front-end react and back-end express.js application where a teacher can provide updates on student progress to parents. The website containes user authentication and role-based access to maintain student/parent confidentiality</p>
+<div class="caresoulDiv">
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[0]" alt="Random first slide"  class="projimage"/>
+      </div>
+      <div class="carousel-caption projtext">
+        <h3>Battleships</h3>
+        <button type="button" class="btn btn-success" ><a href="https://github.com/vrtisjames1/battleship" target="_blank">Github</a></button>
+        <button type="button" class="btn btn-success" ><a href="https://battleships123.netlify.app/" target="_blank">Live</a></button>
+        <p>Front-end angular and back-end django application where two people can create a profile and play a classic game of "Battleships"</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[1]" alt="Random second slide" class="projimage"/>
+      </div>
+      <div class="carousel-caption projtext">
+        <h3>Connect4</h3>
+        <button type="button" class="btn btn-success" ><a href="https://github.com/vrtisjames1/connect4_frontend" target="_blank">Github</a></button>
+        <button type="button" class="btn btn-success" ><a href="https://connect4unit4.herokuapp.com/" target="_blank">Live</a></button>
+        <p>Front-end react and back-end django application where two people can create a profile and play a classic game of "Connect4" through websockets</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[2]" alt="Random third slide"  class="projimage"/>
+      </div>
+      <div class="carousel-caption projtext">
+        <h3>Teacher</h3>
+        <button type="button" class="btn btn-success" ><a href="https://github.com/vrtisjames1/app" target="_blank">Github</a></button>
+        <button type="button" class="btn btn-success" ><a href="https://studentupdate.netlify.app/" target="_blank">Live</a></button>
+        <p>Front-end react and back-end express.js application where a teacher can provide updates on student progress to parents. The website containes user authentication and role-based access to maintain student/parent confidentiality</p>
+
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[3]" alt="Random fourth slide"  class="projimage"/>
+      </div>
+      <div class="carousel-caption projtext">
+        <h3>Secret Santa</h3>
+        <button type="button" class="btn btn-success" ><a href="https://github.com/vrtisjames1/Proj3_App" target="_blank">Github</a></button>
+        <button type="button" class="btn btn-success" ><a href="https://ancient-bastion-28884.herokuapp.com/" target="_blank">Live</a></button>
+        <p>Server side multi-page application to play a game of "Secret Santa". Groups input their names, wishlist, and partner restrictions (such as a spouse), and then names are drawn at random and emailed in secret to each person</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
 </div>
+
+
+
 <div #point_1></div>
 <div class="contactMe" >
   <div class="contactmeDiv">

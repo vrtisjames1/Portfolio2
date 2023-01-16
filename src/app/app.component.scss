@@ -1,24 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
 
 .divcontainer{
     margin: 0;
-    width: 100%;
+    width: 100vw;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    background-image: url('../assets/images/menu.jpg');
     width: 100vw;
     height: auto;
     border-bottom: 1px solid black;
     border-bottom-left-radius: 5px;
+    background-color: rgba(103, 128, 159, 0.8);
 }
 nav{
   width: 100vw;
@@ -28,7 +28,8 @@ nav{
   justify-content: space-evenly;
   position: fixed;
   background-color: rgba(255,255,255, 0.8);
-  font-family: 'Black Ops One', cursive;
+  font-family: 'Unbounded', cursive;
+  z-index: 1;
   cursor: pointer;
 }
 .aboutme1 ,.skills1, .projects1, .resume1, .contact1{
@@ -36,6 +37,8 @@ nav{
 }
 .aboutme, .skills,.projects, .resume, .contact{
   display: flex;
+  color: black;
+  text-shadow: white 2px 2px;
   animation: fadeIn 1.5s;
   -webkit-animation: fadeIn 1.5s;
   -moz-animation: fadeIn 1.5s;
@@ -105,6 +108,15 @@ a{
 }
 
 // about me stuff
+
+.about_me{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
 .photodiv{
   justify-content: center;
   align-items: center;
@@ -114,13 +126,20 @@ a{
 .photo{
   width: 200px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 2px solid black;
   margin-top: 3em;
+}
+
+.imgline{
+  height: 4px;
+  width: 60%;
+  background-color: white;
+  border-radius: 50%;
 }
 
 .aboutmeText{
     display: flex;
-    margin: 2em 4.2em 2em 4.2em;
+    margin: 0 4.2em 2em 4.2em;
     font-size: 1.5em;
     text-align:justify;
     text-align-last:left;
@@ -157,7 +176,7 @@ a{
   background-color: rgba(169, 169, 169,0.65);
   border: 5px solid grey;
   border-radius: 5px;
-  margin: 3em 5em 1.5em 5em;
+  margin: 8em 5em 0 5em;
 }
  .myskills{
   display: flex;
@@ -166,66 +185,9 @@ a{
   margin: 0 3em 0 1.5em;
  }
 
-//  hamburger icon
-.hamburger{
-  display: flex;
-  border-radius: 5px;
-  flex-direction: column;
-  gap: 0.2em;
-  cursor: pointer;
-}
-.ham{
-  height: 6px;
-  width: 40px;
-  background-color: black;
-  border-radius: 5px;
-}
-
-.myprojects{
-  margin: 1.5em 1em 1.5em 1em;
-  border: 1px solid black;
-  border-radius: 5px;
-  text-align: center;
-  background-color: white;
-  width: 90vw;
-  font-size: 1.3em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2em;
-}
-
-.projectsTitle{
-  border-bottom: 1px solid black;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  width: 100%;
-  background: rgb(160,210,235);
-  background: linear-gradient(0deg, rgba(160,210,235,1) 0%, rgba(255,255,255,1) 100%);
-  font-family: 'Black Ops One', cursive;
-}
-
-.projectsimg{
-  max-width: 400px;
-  border: 1px solid black;
-  border-radius: 5px;
-  filter: grayscale(60%)
-}
-
-.projectsimg:hover{
-  max-width: 400px;
-  border: 1px solid black;
-  border-radius: 5px;
-  filter: grayscale(0%)
-}
-
-// contact me information
-
 .contactmeDiv{
-  margin: 1.5em 1em 3em 1em;
-  border: 1px solid black;
+  margin: 0 1em 8em 1em;
+  border: 1px solid grey;
   border-radius: 5px;
   text-align: center;
   background-color: white;
@@ -235,64 +197,58 @@ a{
 
 .contactmeTitle{
   border-bottom: 1px solid black;
+  padding-bottom: 0.6em;
+  padding-top: 1em;
   margin-bottom: 1em;
-  margin-top: 1em;
   width: 100%;
-  background: rgb(160,210,235);
-  background: linear-gradient(0deg, rgba(160,210,235,1) 0%, rgba(255,255,255,1) 100%);
-  font-family: 'Black Ops One', cursive;
+  background: rgb(238,238,238);
+  background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(181,181,123,0.9961050724637681) 41%);
+  text-shadow: white 2px 2px;
+  font-family: 'Unbounded', cursive;
 }
 
-.btn1, .btn2{
-  border: 1px solid black;
-}
-
-// projects images stuff
-/* Container needed to position the button. Adjust the width as needed */
-.projContainer {
-  position: relative;
-  width: 50%;
-}
-
-/* Make the image responsive */
-.projContainer, .projectsimg {
-  width: 100%;
+// caresoul
+.caresoulDiv{
+  border: 1px solid grey;
+  max-width: 600px;
   height: auto;
-}
-
-/* Style the button and place it in the middle of the container/image */
-.projContainer .btn1 {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
   border-radius: 5px;
-}
-
-.btn2 {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+  object-fit:cover;
+  margin: 8em 0 8em 0;
 }
 .projtext{
-  color: grey;
-  width: 80%;
-  padding-bottom: 1em;
-  border-bottom: 1px solid grey;
+  background-color: rgba(0,0,0,0.8);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fffa' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fffa' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.btn{
+  border: 1px solid black;
+
+}
+.projimage{
+  max-width: 98vw;
+}
+// hamburger button
+.btnham {
+  cursor: pointer;
+  margin: 10px;
+}
+
+.icon-bar {
+  width: 22px;
+  height: 2px;
+  background: black;
+  margin: 3px;
+  position: relative;
 }
 
 
@@ -317,6 +273,8 @@ a{
     border-bottom: 1px solid black;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    max-height: 100vh;
+    background-color: rgba(255,255,255,0.9);
   }
 
   .aboutme1 ,.skills1, .projects1, .resume1, .contact1{
@@ -328,6 +286,7 @@ a{
     background-color: rgba(235,235,235,1);
     margin: 0.8em 0 0.8em 0;
     border-radius: 5px;
+    box-shadow: rgba(103, 128, 159, 1) 2px 2px 2px 2px;
   }
 
   .iconsfalse{
@@ -335,15 +294,20 @@ a{
   }
 
   .myprojects{
-    width: 100vw;
-    margin: 0;
+    width: 98vw;
+    margin: 1em 0 1em 0;
   }
 
   .contactmeDiv{
-    width: 100vw;
+    width: 98vw;
+    margin: 1em 0 3em 0;
   }
 
   .projectsimg{
-    width: 100vw;
+    width: 98vw;
+  }
+
+  .projtext{
+font-size: 0.8em;
   }
 }

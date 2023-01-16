@@ -1,6 +1,5 @@
 import { NgModule, Component  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
@@ -23,6 +22,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ViewportScroller } from "@angular/common";
 import { Router } from "@angular/router";
 import { ExtraOptions, RouterModule, Routes } from "@angular/router";
+
 
 @NgModule({
   declarations: [
