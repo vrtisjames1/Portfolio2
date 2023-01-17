@@ -1,6 +1,6 @@
 <div class="divcontainer">
   <div #point_4></div>
-
+<!-- start of header -->
   <header>
     <nav nav class="navbar navbar-default navbar-fixed-top">
       <div (click)="onClick()" (click)="toggleclass()" class="btnham">
@@ -11,7 +11,7 @@
       <div class="aboutme1" [ngClass]="status === true ? 'aboutme': null " (click)="scrollaboutme(point_4)" (click)="this.isHamburguer = true;">About Me</div>
       <div class="skills1"[ngClass]="status === true ? 'skills': null " (click)="scrollSkills(point_3)" (click)="this.isHamburguer = true;">Skills</div>
       <div class="projects1"[ngClass]="status === true ? 'projects': null " (click)="scrollProjects(point_2)" (click)="this.isHamburguer = true;">Projects</div>
-      <div class="resume1"[ngClass]="status === true ? 'resume': null "  ><a target="_blank" href="https://drive.google.com/file/d/1hvNHDxtfryfxd-T6IqgGPVznmlga_DrI/view?usp=share_link" (click)="this.isHamburguer = true;">Resume</a></div>
+      <div class="resume1"[ngClass]="status === true ? 'resume': null "  ><a target="_blank" href="https://drive.google.com/file/d/1hvNHDxtfryfxd-T6IqgGPVznmlga_DrI/view?usp=share_link" (click)="this.isHamburguer = true;" (click)="changeStatus()">Resume</a></div>
       <div class="contact1"[ngClass]="status === true ? 'contact': null " (click)="scrollContact(point_1)" (click)="this.isHamburguer = true;">Contact</div>
     </nav>
 
@@ -39,39 +39,79 @@
         <img class="photo" src="../assets/images/photo.jpg"/>
       </div>
       <div class="imgline"></div>
+
+
+        <div class="name">
+          <h1 >Jimmy</h1>
+        </div>
+
+
       <p class="aboutmeText">
-        "Lifelong learner with a diverse background in education and employment in Software Engineering and Project Management. I enjoy the challenges of managing new projects and teams, integrating new ideas, and working with a team to efficiently overcome project challenges. Air Force Veteran with over 11 years of leadership experience"
+        My name is Jimmy, it is a pleasure to meet you. I have a diverse backround in Software Engineering, Electrical Engineering, Reservoir Engineering, & Project Management. I am based in Boston, MA but I love to travel and explore. I'm an Air Force veteran with over 11 years of leadership experience.
       </p>
+        <p class="aboutmeText">I have an A.A.Sc., B.Sc. in Petroleum Engineering, and I am currently pursuing a M.Sc in Electrical Engineering from the University of North Dakota. Needless to say, I have a passion for learning. I enjoy the daily challenges and complexities with software engineering.</p>
+        <div class="aboutmeImage">
+        <img class="und" src="../assets/images/und.png"/>
+        <img class="und" src="../assets/images/airforce.png"/> 
+      </div>
+      
     </div>
 </header>
-<div #point_3></div>
+<div #point_3 class="triangle-down"></div>
+<!-- end of header -->
+
+<!-- <div #point_3></div> -->
 <div class="skillsDiv">
 <div class="skillsTitle"><h2>My Skills</h2></div>
 <div class="myskillsDiv" >
   <div class="myskills">
       <div>
+        <p>Django</p>
         <img src="../assets/skills/django.png"/>
       </div>
       <div>
+        <p>Angular</p>
         <img src="../assets/skills/angular.png"/>
       </div>
       <div>
+        <p>CSS</p>
         <img src="../assets/skills/css.png"/>
       </div>
       <div>
+        <p>MATLAB</p>
         <img src="../assets/skills/matlab.png"/>
       </div>
       <div>
+        <p>MongoDB</p>
         <img src="../assets/skills/mongodb.png"/>
       </div>
       <div>
+        <p>Mongoose</p>
         <img src="../assets/skills/mongoose.png"/>
       </div>
       <div>
+        <p>React</p>
         <img src="../assets/skills/react.png"/>
       </div>
       <div>
+        <p>SQL</p>
         <img src="../assets/skills/sql.png"/>
+      </div>
+      <div>
+        <p>Express.js</p>
+        <img src="../assets/skills/express.png"/>
+      </div>
+      <div>
+        <p>Heroku</p>
+        <img src="../assets/skills/heroku.png"/>
+      </div>
+      <div>
+        <p>R Studio</p>
+        <img src="../assets/skills/R.png"/>
+      </div>
+      <div>
+        <p>Python</p>
+        <img src="../assets/skills/python.png"/>
       </div>
   </div>
 </div>

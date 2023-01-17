@@ -16,10 +16,8 @@ header{
     align-items: center;
     width: 100vw;
     height: auto;
-    border-bottom: 1px solid black;
-    border-bottom-left-radius: 5px;
     background-color: rgba(103, 128, 159, 0.8);
-    padding-bottom: 2em;
+    // padding-bottom: 2em;
 }
 nav{
   width: 100vw;
@@ -39,12 +37,47 @@ nav{
 .aboutme, .skills,.projects, .resume, .contact{
   display: flex;
   color: black;
+  transition: max-height 3s ease-out;
   text-shadow: white 2px 2px;
+}
+.aboutme{
+  animation: fadeIn 0.5s;
+  -webkit-animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  -o-animation: fadeIn 0.5s;
+  -ms-animation: fadeIn 0.5s;
+}
+
+.skills{
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+}
+
+.projects{
   animation: fadeIn 1.5s;
   -webkit-animation: fadeIn 1.5s;
   -moz-animation: fadeIn 1.5s;
   -o-animation: fadeIn 1.5s;
   -ms-animation: fadeIn 1.5s;
+}
+
+.resume{
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 12s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+
+.contact{
+  animation: fadeIn 2.5s;
+  -webkit-animation: fadeIn 2.5s;
+  -moz-animation: fadeIn 2.5s;
+  -o-animation: fadeIn 2.5s;
+  -ms-animation: fadeIn 2.5s;
 }
 
 // icons
@@ -109,13 +142,23 @@ a{
 }
 
 // about me stuff
+.name{
+  color: white;
+  text-shadow: black 1px 1px;
+}
+
 
 .about_me{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  margin: 0 4em 0 4em;
   gap: 1em;
+}
+
+.und{
+  max-width: 5em;
+  // background-color: white;
 }
 
 .photodiv{
@@ -133,18 +176,21 @@ a{
 }
 
 .imgline{
+  margin: auto;
+  justify-content: center;
   height: 4px;
   width: 60%;
   background-color: white;
   border-radius: 50%;
+  box-shadow: gold 1px 1px;
 }
 
 .aboutmeText{
     display: flex;
-    margin: 0 4.2em 2em 4.2em;
     font-size: 1.5em;
     text-align:justify;
     text-align-last:left;
+    color: white;
 }
 
 @keyframes fadeIn {
@@ -171,11 +217,26 @@ a{
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
+// =============
+// end of navigation menu
+
+.triangle-down{
+  content: '';
+  display: flex;
+  width: 100vw;
+  height: 0;
+  // margin-left:-50px;
+  border-left: 800px solid transparent;
+  border-right: 800px solid transparent;
+  border-top: 150px solid rgba(103, 128, 159, 0.8);
+}
+
+// ===============
 
   .skillsDiv{
-    max-width: 500px;
+    max-width: 600px;
     border: 5px solid grey;
-    margin-top: 15em;
+    margin-top: 13em;
     border-radius: 5px;
     width:98vw;
   }
@@ -192,17 +253,22 @@ a{
   }
 .myskillsDiv{
   display: flex;
-  // max-width: 500px;
   overflow-x:scroll;
   background-color: rgba(169, 169, 169,0.65);
   border-radius: 5px;
-  // margin: 0 5em 0 5em;
+  padding-left: 25px;
+  padding-right: 25px;
+  // filter: grayscale(1);
 }
  .myskills{
   display: flex;
   justify-content: space-evenly;
   gap: 1em;
-  // margin: 0 3em 0 1.5em;
+  text-align: center;
+  p{
+    font-weight: 500;
+  }
+
  }
 
 .contactmeDiv{
@@ -213,7 +279,7 @@ a{
   background-color: white;
   width: 90vw;
   font-size: 1.3em;
-  max-width: 500px;
+  max-width: 600px;
   padding-bottom: 4em;
 }
 
@@ -285,6 +351,7 @@ a{
 
   .aboutmeText{
     font-size: 1.2em;
+    text-align:left;
   }
 
   nav{

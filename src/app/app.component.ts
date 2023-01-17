@@ -54,7 +54,7 @@ export class AppComponent {
 	constructor(config: NgbCarouselConfig) {
 		// customize default values of carousels used by this component tree
 		config.interval = 30000;
-		config.wrap = false;
+		config.wrap = true;
 		config.keyboard = false;
 		config.pauseOnHover = true;
 	}
@@ -89,6 +89,10 @@ scrollContact(el: HTMLElement) {
   this.status = false;
 }
 // hamburger menu
+
+changeStatus(){
+  this.status = false;
+}
 
 isHamburguer = true;
 onClick() {
