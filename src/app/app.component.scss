@@ -323,14 +323,14 @@ a{
   margin: 15em 0 15em 0;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
+:host ::ng-deep .carousel-control-prev,
+:host ::ng-deep .carousel-control-next {
   // color: $carousel-control-color;
   color: black;
   &:hover,
   &:focus {
     // color: $carousel-control-color;
-    color: grey;
+    color: gold;
   }
 }
 .projtext{
