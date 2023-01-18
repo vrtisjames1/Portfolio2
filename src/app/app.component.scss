@@ -322,6 +322,12 @@ a{
   object-fit:cover;
   margin: 15em 0 15em 0;
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+  // color: $carousel-control-color;
+  color: black;
+}
 .projtext{
   background-color: rgba(0,0,0,0.8);
   padding: 5px;
