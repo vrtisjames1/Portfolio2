@@ -261,8 +261,23 @@ a{
   border-radius: 5px;
   padding-left: 25px;
   padding-right: 25px;
-  // filter: grayscale(1);
 }
+// scrollbar test below
+.myskillsDiv::-webkit-scrollbar {
+  width: 11px;
+  height: 10px;
+  }
+  .myskillsDiv::-webkit-scrollbar-track-piece  {
+  background-color: rgba(255, 255, 255, 0.8);
+  }
+  .myskillsDiv::-webkit-scrollbar-thumb:horizontal {
+  height: 11px;
+  border-radius: 5px;
+  background-color: rgba(103, 128, 159, 0.8);
+  border: 1px solid white;
+  }
+
+// scrollbar text above
  .myskills{
   display: flex;
   justify-content: space-evenly;
@@ -311,14 +326,6 @@ a{
   background-color: rgba(0,0,0,0.8);
   padding: 5px;
   border-radius: 5px;
-}
-
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fffa' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-}
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fffa' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
 .btn{
