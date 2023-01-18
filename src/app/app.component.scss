@@ -327,6 +327,11 @@ a{
 .carousel-control-next {
   // color: $carousel-control-color;
   color: black;
+  &:hover,
+  &:focus {
+    // color: $carousel-control-color;
+    color: grey;
+  }
 }
 .projtext{
   background-color: rgba(0,0,0,0.8);
