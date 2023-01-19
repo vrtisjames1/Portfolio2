@@ -22,11 +22,18 @@ header{
 nav{
   width: 100vw;
   font-size: 1.75em;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  max-height: 100vh;
+  background-color: rgba(255,255,255,0.9);
   height: auto;
   display: flex;
   justify-content: space-evenly;
   position: fixed;
-  background-color: rgba(255,255,255, 0.8);
   font-family: 'Unbounded', cursive;
   z-index: 1;
   cursor: pointer;
@@ -34,13 +41,37 @@ nav{
 .aboutme1 ,.skills1, .projects1, .resume1, .contact1{
   display: none;
 }
+
 .aboutme, .skills,.projects, .resume, .contact{
+  font-size: 0.75em;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+  width: 60%;
+  border: 1px solid black;
+  background-color: rgba(235,235,235,1);
+  margin: 0.8em 0 0.8em 0;
+  border-radius: 5px;
+  box-shadow: rgba(103, 128, 159, 1) 2px 2px 2px 2px;
+  max-width: 300px;
   display: flex;
   color: black;
-  transition: max-height 3s ease-out;
+  transition: max-height 1.25s ease-out;
   text-shadow: white 2px 2px;
 }
+
+.aboutme:hover, .skills:hover,.projects:hover, .resume:hover, .contact:hover{
+  background-color: white;
+}
+
 .aboutme{
+  animation: fadeIn 0.25s;
+  -webkit-animation: fadeIn 0.25s;
+  -moz-animation: fadeIn 0.25s;
+  -o-animation: fadeIn 0.25s;
+  -ms-animation: fadeIn 0.25s;
+}
+
+.skills{
   animation: fadeIn 0.5s;
   -webkit-animation: fadeIn 0.5s;
   -moz-animation: fadeIn 0.5s;
@@ -48,20 +79,12 @@ nav{
   -ms-animation: fadeIn 0.5s;
 }
 
-.skills{
+.projects{
   animation: fadeIn 1s;
   -webkit-animation: fadeIn 1s;
   -moz-animation: fadeIn 1s;
   -o-animation: fadeIn 1s;
   -ms-animation: fadeIn 1s;
-}
-
-.projects{
-  animation: fadeIn 1.5s;
-  -webkit-animation: fadeIn 1.5s;
-  -moz-animation: fadeIn 1.5s;
-  -o-animation: fadeIn 1.5s;
-  -ms-animation: fadeIn 1.5s;
 }
 
 .resume{
@@ -73,11 +96,11 @@ nav{
 }
 
 .contact{
-  animation: fadeIn 2.5s;
-  -webkit-animation: fadeIn 2.5s;
-  -moz-animation: fadeIn 2.5s;
-  -o-animation: fadeIn 2.5s;
-  -ms-animation: fadeIn 2.5s;
+  animation: fadeIn 1.25s;
+  -webkit-animation: fadeIn 1.25s;
+  -moz-animation: fadeIn 1.25s;
+  -o-animation: fadeIn 1.25s;
+  -ms-animation: fadeIn 1.25s;
 }
 
 // icons
@@ -159,6 +182,10 @@ a{
   gap: 1em;
 }
 
+.aboutmeImage{
+  margin-bottom: 1em;
+}
+
 .und{
   max-width: 5em;
   // background-color: white;
@@ -229,8 +256,8 @@ a{
   width: 100vw;
   height: 0;
   // margin-left:-50px;
-  border-left: 800px solid transparent;
-  border-right: 800px solid transparent;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
   border-top: 150px solid rgba(103, 128, 159, 0.8);
 }
 
@@ -314,13 +341,33 @@ a{
 }
 
 // caresoul
-.caresoulDiv{
+
+.projDiv{
+  max-width: 600px;
   border: 5px solid grey;
+  margin-top: 13em;
+  border-radius: 5px;
+  width:98vw;
+  margin: 15em 0 15em 0;
+}
+
+.projTitle{
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding-bottom: 0.6em;
+  padding-top: 1em;
+  background: rgb(238,238,238);
+  background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(181,181,123,0.9961050724637681) 41%);
+  text-shadow: white 2px 2px;
+  font-family: 'Unbounded', cursive;
+}
+
+.caresoulDiv{
+  // border: 5px solid grey;
   max-width: 600px;
   height: auto;
   border-radius: 5px;
   object-fit:cover;
-  margin: 15em 0 15em 0;
 }
 
 :host ::ng-deep .carousel-control-prev,
@@ -377,8 +424,18 @@ a{
     font-size: 1.2em;
     text-align:left;
   }
+// nav stuff 
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  background-color: rgba(103, 128, 159, 0.8);
+}
 
   nav{
+    width: 100vw;
     font-size: 1.2em;
     flex-direction: column;
     align-items: center;

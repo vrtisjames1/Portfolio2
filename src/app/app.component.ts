@@ -42,7 +42,7 @@ import {
         })
       ),
       transition('* => *', [
-        animate('0.4s'), // controls animation speed
+        animate('0.2s'), // controls animation speed
       ]),
     ]),
   ],
